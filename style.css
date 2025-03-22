@@ -1,0 +1,2051 @@
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #fff;
+  --nav-bg: #111;
+  --card-bg: #111;
+  --accent-color: #00ffcc;
+  --hover-color: #00ccaa;
+  --heading-color: #00ffcc;
+  --border-color: #d19a0e;
+  --profile-border: #fa06b5;
+}
+
+[data-theme="light"] {
+  --bg-color: #f0f7ff;
+  --text-color: #2c3e50;
+  --nav-bg: rgba(227, 242, 253, 0.8);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --accent-color: #4a90e2;
+  --hover-color: #357abd;
+  --heading-color: #e91e63;
+  --border-color: #ff9800;
+  --profile-border: #9c27b0;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --gradient-1: #4a90e2;
+  --gradient-2: #e91e63;
+  --gradient-3: #9c27b0;
+}
+
+/* Light Theme Specific Styles */
+[data-theme="light"] body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+[data-theme="light"] .hero {
+  background: linear-gradient(135deg, rgba(240, 247, 255, 0.8) 0%, rgba(240, 247, 255, 0.4) 100%);
+}
+
+[data-theme="light"] .hero-content h1 {
+  color: var(--heading-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .hero-content p {
+  color: var(--text-color);
+}
+
+[data-theme="light"] .hero-content .work {
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  color: white;
+}
+
+[data-theme="light"] .skill-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .about-content {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  box-shadow: var(--card-shadow);
+}
+
+[data-theme="light"] .contact form {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+[data-theme="light"] .contact input,
+[data-theme="light"] .contact textarea {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  color: var(--text-color);
+}
+
+[data-theme="light"] .contact button {
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  color: white;
+}
+
+[data-theme="light"] nav {
+  background: rgba(227, 242, 253, 0.9);
+  border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+[data-theme="light"] nav .logo {
+  color: var(--heading-color);
+}
+
+[data-theme="light"] nav ul li a {
+  color: var(--text-color);
+}
+
+[data-theme="light"] nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+[data-theme="light"] .theme-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+}
+
+[data-theme="light"] footer {
+  background: rgba(227, 242, 253, 0.9);
+  border-top: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+[data-theme="light"] .grid-lines {
+  opacity: 0.3;
+  background-image: 
+    linear-gradient(rgba(74, 144, 226, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 144, 226, 0.1) 1px, transparent 1px);
+}
+
+[data-theme="light"] #particles-js {
+  opacity: 0.5;
+}
+
+/* Background Image and Overlay for Light Theme */
+[data-theme="light"] body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.15;
+  z-index: -2;
+}
+
+/* Gradient Overlay */
+[data-theme="light"] body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(74, 144, 226, 0.1) 0%,
+    rgba(233, 30, 99, 0.1) 50%,
+    rgba(156, 39, 176, 0.1) 100%
+  );
+  z-index: -1;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Enhanced Glass Effect for Cards */
+[data-theme="light"] .skill-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .about-content {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+/* Enhanced Navigation Bar */
+[data-theme="light"] nav {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(227, 242, 253, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced Footer */
+[data-theme="light"] footer {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(227, 242, 253, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced Form Elements */
+[data-theme="light"] .contact input,
+[data-theme="light"] .contact textarea {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced Grid Lines */
+[data-theme="light"] .grid-lines {
+  opacity: 0.5;
+  background-image: 
+    linear-gradient(rgba(74, 144, 226, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 144, 226, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Enhanced Hero Section */
+[data-theme="light"] .hero-content {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .hero-content h1 {
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  display: inline-block;
+}
+
+/* Fallback for browsers that don't support background-clip */
+@supports not (background-clip: text) {
+  [data-theme="light"] .hero-content h1 {
+    color: var(--heading-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Animated Grid Lines */
+[data-theme="light"] .grid-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(74, 144, 226, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 144, 226, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
+  animation: gridMove 30s linear infinite;
+}
+
+/* Animations */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+/* Enhanced Hover Effects */
+[data-theme="light"] .skill-card:hover,
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .about-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+}
+
+[data-theme="light"] .hero-content button:hover {
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  align-items: center;
+  margin-right: 80px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  margin-right: 15px;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* For light theme */
+body.light-theme .theme-toggle {
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid rgba(52, 152, 219, 0.5);
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  border-color: #3498db;
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.5);
+}
+
+.name {
+  font-size: 2rem;
+  margin: 0;
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;  /* Add left padding */
+}
+
+.hero-content {
+  text-align: left;  /* Align text to left */
+  max-width: 600px;  /* Control width of content */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #3498db, #2c3e50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.work {
+  align-self: flex-start;  /* Align button to left */
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #3498db, #2c3e50);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.work:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 5%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Enhanced Grid Lines */
+.grid-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0,255,204,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,204,0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
+  animation: gridMove 30s linear infinite;
+}
+
+/* Enhanced Navigation */
+nav {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,255,204,0.1);
+}
+
+nav .logo {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--accent-color), #ff6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav ul li a {
+  position: relative;
+  padding: 5px 0;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Enhanced Cards */
+.skill-card, .project-card, .about-content {
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,255,204,0.1);
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before, .project-card::before, .about-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0,255,204,0.1),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.skill-card:hover::before, .project-card:hover::before, .about-content:hover::before {
+  left: 100%;
+}
+
+.skill-card:hover, .project-card:hover, .about-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,255,204,0.2);
+  border-color: var(--accent-color);
+}
+
+/* Enhanced Form */
+.contact {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+  background: linear-gradient(45deg, #2980b9, #3498db);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .contact {
+    max-width: 90%;
+    padding: 20px;
+  }
+  
+  .contact input,
+  .contact textarea {
+    padding: 12px;
+  }
+}
+
+/* Enhanced Footer */
+footer {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0,255,204,0.1);
+  padding: 30px;
+}
+
+.work{
+  margin-top: 20px;
+  border-radius: 10px;
+}
+h1{
+  text-align: center;
+}
+.work:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #14a0c0;
+}
+button{
+  border-radius:50px ;
+}
+
+/* Advanced Animations and Effects */
+.hero-animation {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* 3D Card Effect */
+.skill-card, .project-card, .about-content {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.skill-card:hover, .project-card:hover, .about-content:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Glowing Border Effect */
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 5px var(--accent-color),
+                0 0 10px var(--accent-color),
+                0 0 15px var(--accent-color);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--accent-color),
+                0 0 20px var(--accent-color),
+                0 0 30px var(--accent-color);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--accent-color),
+                0 0 10px var(--accent-color),
+                0 0 15px var(--accent-color);
+  }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Particle Container */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Enhanced Navigation */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent-color), var(--heading-color));
+  transform-origin: 0%;
+  z-index: 1001;
+}
+
+/* Enhanced Button Effects */
+.hero-content button, .contact button {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-content button::before, .contact button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.hero-content button:hover::before, .contact button:hover::before {
+  left: 100%;
+}
+
+/* Text Reveal Animation */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill Progress Animation */
+.skill-progress {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.skill-progress-bar {
+  height: 100%;
+  background: var(--accent-color);
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Enhanced Form Inputs */
+.contact input, .contact textarea {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading Animation */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--accent-color);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Theme Toggle Enhancement */
+.theme-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(180deg);
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .hero-animation {
+    display: none;
+  }
+  
+  .about-content {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .grid-lines {
+    opacity: 0.3;
+  }
+}
+
+/* Dark Theme Enhancements */
+[data-theme="dark"] .skill-card,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .about-content {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .hero-content h1 {
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-color);
+}
+
+/* Enhanced Hover Effects for Navigation Links */
+nav ul li a {
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), var(--heading-color));
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+/* Enhanced Hover Effect for Hero Button */
+.hero-content .work {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero-content .work::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.hero-content .work:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 255, 204, 0.4);
+  letter-spacing: 2px;
+}
+
+.hero-content .work:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Hover Effect for Skill Cards */
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 204, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 255, 204, 0.3);
+  border-color: var(--accent-color);
+}
+
+.skill-card:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Hover Effect for Project Cards */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card img {
+  transition: all 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 255, 204, 0.2) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 255, 204, 0.3);
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* Enhanced Hover Effect for Contact Form Inputs */
+.contact input,
+.contact textarea {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
+  border-color: var(--accent-color);
+}
+
+/* Enhanced Hover Effect for Contact Submit Button */
+.contact button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.contact button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 255, 204, 0.4);
+  letter-spacing: 2px;
+}
+
+.contact button:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Hover Effect for Theme Toggle */
+.theme-toggle {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2) rotate(180deg);
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Enhanced Hover Effect for About Content */
+.about-content {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.about-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 204, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.about-content:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 255, 204, 0.3);
+}
+
+.about-content:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Hover Effect for Profile Image */
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Enhanced Hover Effect for Section Headings */
+section h2 {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), var(--heading-color));
+  transition: width 0.3s ease;
+}
+
+section h2:hover {
+  transform: translateY(-2px);
+  color: var(--accent-color);
+}
+
+section h2:hover::after {
+  width: 100%;
+}
+
+/* Cursor Following Animations */
+.skill-card, .project-card, .about-content {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Enhanced 3D Card Effect with Cursor Following */
+.skill-card, .project-card, .about-content {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Add this to your existing hover effects */
+.skill-card:hover, .project-card:hover, .about-content:hover {
+  transform: translateY(-10px);
+}
+
+/* Add cursor-following effect */
+.skill-card, .project-card, .about-content {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Enhanced Hero Content with Cursor Following */
+.hero-content {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Add cursor-following effect to navigation items */
+nav ul li {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Add cursor-following effect to buttons */
+.hero-content .work, .contact button {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Add cursor-following effect to profile image */
+.profile-img {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Add cursor-following effect to section headings */
+section h2 {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Add cursor-following effect to form inputs */
+.contact input, .contact textarea {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+/* Remove all hover-related styles */
+.skill-card:hover,
+.project-card:hover,
+.about-content:hover,
+.hero-content button:hover,
+.contact button:hover,
+nav ul li a:hover,
+.contact input:hover,
+.contact textarea:hover,
+.profile-img:hover,
+section h2:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: inherit;
+}
+
+/* Dark theme (default) */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Light theme */
+body.light-theme {
+  background: linear-gradient(120deg, #f6f7f8 0%, #e9ebee 100%);
+  color: #2c3e50;
+}
+
+/* Light theme adjustments */
+body.light-theme nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .logo {
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .nav-links a {
+  color: #3498db;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+body.light-theme .nav-links a:hover {
+  color: #2980b9;
+  transform: translateY(-2px);
+}
+
+body.light-theme .nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+body.light-theme .nav-links a:hover::after {
+  width: 100%;
+}
+
+body.light-theme .theme-toggle {
+  background: linear-gradient(145deg, #2c3e50, #34495e);
+  color: #fff;
+  border: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
+              -5px -5px 15px rgba(255, 255, 255, 0.7);
+}
+
+body.light-theme .theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25),
+              -7px -7px 20px rgba(255, 255, 255, 0.8);
+}
+
+body.light-theme .hero-content {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .hero-content h1 {
+  background: linear-gradient(120deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+body.light-theme .work {
+  background: linear-gradient(120deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+body.light-theme .work:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+}
+
+body.light-theme .skill-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(52, 152, 219, 0.1);
+  transition: all 0.3s ease;
+}
+
+body.light-theme .skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+}
+
+body.light-theme .project-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+body.light-theme .project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+body.light-theme .contact {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme input,
+body.light-theme textarea {
+  background: white;
+  border: 2px solid #e9ebee;
+  border-radius: 10px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+body.light-theme input:focus,
+body.light-theme textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+body.light-theme .profile-img {
+  border: 5px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+body.light-theme .profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Add smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add animation for section transitions */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact form adjustments */
+.contact {
+    padding-top: 40px;  /* Reduced top padding */
+    margin-top: -30px;  /* Move section up */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* Reduced gap between inputs */
+    max-width: 600px;
+    margin: 20px auto;  /* Centered form with reduced margin */
+    padding: 20px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;  /* Reduced padding */
+    margin-bottom: 10px;  /* Reduced margin */
+    border-radius: 8px;
+    border: 2px solid #e9ebee;
+    transition: all 0.3s ease;
+}
+
+.contact textarea {
+    height: 120px;  /* Reduced height */
+    resize: vertical;
+}
+
+.contact button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(120deg, #3498db, #2980b9);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;  /* Reduced margin */
+}
+
+.contact h2 {
+    margin-bottom: 20px;  /* Reduced margin */
+}
+
+/* Light theme specific adjustments */
+body.light-theme .contact {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .contact input:focus,
+body.light-theme .contact textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    transform: translateY(-2px);
+}
+
+body.light-theme .contact button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #121212;
+}
+
+/* Add some blur to other content containers to make them stand out */
+.hero-content, .about, .skills, .projects, .contact {
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Section divider styling */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    margin: 50px 0;
+    position: relative;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(52, 152, 219, 0.5),
+        transparent
+    );
+}
+
+.section-divider::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+}
+
+/* Add margin to sections */
+section {
+    margin: 80px 0;
+    position: relative;
+}
+
+/* Section heading with line decoration */
+section h2 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #3498db, transparent);
+}
+
+/* Profile section styling */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid rgba(52, 152, 219, 0.5);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: #3498db;
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.5);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Add space before footer */
+.contact {
+    margin-bottom: 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        margin-right: 20px;
+    }
+}
+
+.skills {
+    padding: 40px 0;
+    margin-bottom: 60px; /* Add bottom margin to the section */
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: row;  /* Change to row instead of column */
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.skill-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-card i {
+    font-size: 1.5em;
+    color: #3498db;
+}
+
+/* Hover effect */
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #3498db;
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+    }
+}
+
+/* Icon styling */
+.nav-links a i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.skill-card i {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #3498db;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group input,
+.input-group textarea {
+    padding-left: 40px;
+}
+
+/* Icon animations */
+.skill-card:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover i {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+/* Theme toggle icon */
+.theme-toggle i {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(360deg);
+}
+
+/* Section headings with icons */
+section h2 i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+/* Profile Image Fix */
+.profile-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 30px;
+    border: 3px solid rgba(52, 152, 219, 0.5);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Adjust this to position the face properly */
+    transform: scale(1.1); /* Slightly scale up to ensure no white edges */
+}
+
+/* Theme Toggle Fix */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-toggle:hover i {
+    transform: rotate(180deg);
+}
+
+/* Light theme adjustments */
+body.light-theme .theme-toggle {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .theme-toggle i {
+    color: #333;
+}
+
+.skills h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    margin-left: 40px; /* Add left margin to move right */
+}
+
+.skills h2 i {
+    color: #3498db;
+    animation: spin 4s linear infinite;
+}
+
+/* Optional: Add rotation animation for the gear icon */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Container adjustment */
+.skills {
+    padding: 20px;
+    margin-left: 20px; /* Add overall section left margin */
+}
+
+/* If you want to adjust the entire section alignment */
+.skills-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 50px; /* Adjust this value to move more/less to the right */
+}
+
+/* Loader styles */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: #3498db;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+}
+
+.orbital {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 4px solid transparent;
+}
+
+.orbital-1 {
+    width: 120px;
+    height: 120px;
+}
+
+/* Animation helper classes */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+/* Section transitions */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add animation delays for skill cards */
+.skill-card:nth-child(1) { transition-delay: 0.1s; }
+.skill-card:nth-child(2) { transition-delay: 0.2s; }
+.skill-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Add hover animations */
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+/* Navigation link animations */
+.nav-links a {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* New Background Animation Styles */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: #0a0a0a;
+}
+
+.gradient-sphere {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: linear-gradient(
+        45deg,
+        rgba(0, 183, 255, 0.15),
+        rgba(128, 0, 255, 0.15),
+        rgba(0, 255, 149, 0.15)
+    );
+    filter: blur(80px);
+    animation: sphereMove 20s ease infinite;
+}
+
+.animated-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridFloat 15s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes sphereMove {
+    0% {
+        top: -30%;
+        left: -30%;
+        transform: scale(1);
+    }
+    25% {
+        top: -30%;
+        left: 60%;
+        transform: scale(1.2);
+    }
+    50% {
+        top: 60%;
+        left: 60%;
+        transform: scale(1);
+    }
+    75% {
+        top: 60%;
+        left: -30%;
+        transform: scale(1.2);
+    }
+    100% {
+        top: -30%;
+        left: -30%;
+        transform: scale(1);
+    }
+}
+
+@keyframes gridFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(50px) rotate(2deg);
+    }
+}
+
+/* Glass effect for content sections */
+.hero-content,
+.about-content,
+.skills-grid,
+.project-card,
+.contact {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Add shine effect on hover */
+.skill-card,
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before,
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.skill-card:hover::before,
+.project-card:hover::before {
+    left: 100%;
+}
+
+/* Add glow effect to important elements */
+.hero-content h1,
+section h2 {
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gradient-sphere {
+        width: 400px;
+        height: 400px;
+    }
+}
+
